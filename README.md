@@ -94,3 +94,18 @@ The component exposes certain methods and events so that it can be managed with 
 `unselectAllItems()`
 
     *Unselect all items in the list*
+
+### Events
+
+`change`
+
+    *Fires when a change in an item occurs, or a new item is added, or an item is deleted or the order of items changes. The property `evt.details` of the passed Event object `evt` provides details about the change.*
+
+    **Example**
+
+        document.querySelector("editable-list").addEventListener(
+            "change",
+            function(evt) {
+                console.log(evt.detail);
+            }
+        );
